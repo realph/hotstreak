@@ -1,0 +1,36 @@
+﻿<section class="mainbar">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="widget wblue">
+                    <div data-cc-widget-header title="{{vm.title}}"></div>
+                    <div class="widget-content user">
+
+                        <input data-ng-model="vm.filter.name" placeholder="Find Avengers by name" type="search"/>
+                        <table class="table table-condensed table-striped">
+                            <thead>
+                            <tr>
+                                <th></th>
+                                <th>Movie</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr data-ng-repeat="m in vm.movieList">
+                                <td><img
+                                        ng-src="http://image.tmdb.org/t/p/w370/{{m.poster_path}}"
+                                        class="avenger-thumb img-rounded"/></td>
+                                <td><span class="avenger-name">{{m.title}}</span></td>
+                                <td>{{ m.overview }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
